@@ -1,0 +1,7 @@
+
+
+
+= Main section =
+    @if ${ someUndefinedFunction() }
+        some-missing-object:
+            width 100px

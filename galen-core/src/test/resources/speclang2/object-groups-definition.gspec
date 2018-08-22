@@ -1,0 +1,7 @@
+@objects
+    menu        #menu
+        # Inline group declaration
+        item-1  @grouped(image-validation, menu-stuff)    ul li
+        item-2      ul li
+
+    button  @grouped(image-validation)    #btn

@@ -1,0 +1,18 @@
+========================================
+Test: page1.test
+========================================
+com.galenframework.components.report.FakeException: Some exception here
+\t    at net.mindengine.someclass.SomeClass.method1(SomeClass.java:4)
+\t    at net.mindengine.someclass.SomeClass2.method2(SomeClass2.java:5)
+\t    at net.mindengine.someclass.SomeClass3.method3(SomeClass3.java:6)
+
+========================================
+----------------------------------------
+========================================
+Failed tests:
+    page1.test
+
+Suite status: FAIL
+Total tests: 1
+Total failed tests: 1
+Total failures: 5
