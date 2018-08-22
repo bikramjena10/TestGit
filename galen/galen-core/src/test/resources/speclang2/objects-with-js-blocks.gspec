@@ -1,5 +1,0 @@
-@set headerCss      .some-header
-
-
-@objects
-    header_caption          ${headerCss} h1

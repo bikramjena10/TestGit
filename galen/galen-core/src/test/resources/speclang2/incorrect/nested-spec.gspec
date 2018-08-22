@@ -1,9 +1,0 @@
-@objects
-    header      #header
-
-
-= Main section =
-    header:
-        width 100px
-            height 100px
-            # ^ should give error
