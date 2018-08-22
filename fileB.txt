@@ -1,0 +1,1 @@
+this is file b in bugfix branch
