@@ -1,0 +1,56 @@
+
+@@ Parameterized
+    | size      | tag                    | name         |   exclude  |
+    | 320x240   | mobile                 | Phone        |   nomobile |
+    | 640x480   | tablet                 | Tablet       |            |
+Test for ${name}
+------------------------------------------------
+    http://example.com/page1  ${size}
+        check page1.spec   --include "${tag}" --exclude "${exclude}"
+
+
+        
+@@ Table custom_global_table
+    | size      | tag                    | name         |   exclude  |   urlPage |
+    | 320x240   | mobile                 | Phone        |   nomobile |   page1   |
+    | 640x480   | tablet                 | Tablet       |            |   page2   |
+
+
+@@ Table custom_global_table2
+    | size      | tag                    | name         |   exclude   |   urlPage |
+    | 1024x768  | desktop                | Desktop      |   nodesktop |   page3   |
+        
+        
+@@ Parameterized using custom_global_table, custom_global_table2
+Test combining 2 tables for ${name}
+------------------------------------------------
+    http://example.com/${urlPage}    ${size}
+        check page1.spec --include "${tag}" --exclude "${exclude}"
+
+
+
+# Till this moment there should 5 suites already
+# And for the next parameterization it will generate 6 more suites
+
+
+@@ Table browsers
+    | browser | browser_name | version |
+    | firefox | Firefox      | any     |
+    | ie      | IE 8         | 8       |
+    | ie      | IE 9         | 9       |
+    
+@@ Table sizes
+    | size      | tag                    | device       |   exclude  |   urlPage |
+    | 320x240   | mobile                 | Phone        |   nomobile |   page1   |
+    | 640x480   | tablet                 | Tablet       |            |   page2   |
+    
+    
+@@ Parameterized using browsers
+@@ Parameterized using sizes   
+Test using 2 layer tables in browser ${browser_name} for type ${device}
+------------------------------------------------------
+    selenium grid http://mygrid:8080/wd/hub --browser "${browser}" --version "${version}" --page http://example.com/${urlPage} --size ${size}
+        check page1.spec --include "${tag}" --exclude "${exclude}"
+
+        
+    

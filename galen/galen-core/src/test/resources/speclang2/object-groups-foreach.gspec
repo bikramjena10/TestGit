@@ -1,0 +1,14 @@
+@objects
+    menu-item-1     #mi1
+    menu-item-2     #mi2
+    login-button    #login-btn
+    cancel-button   #cancel-btn
+
+@groups
+    buttons         *-button
+
+
+= Main Section =
+    @forEach [&buttons] as button
+        ${button}:
+            height 30px

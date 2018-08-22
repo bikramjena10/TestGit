@@ -1,0 +1,38 @@
+{
+    "pageName": "test page",
+    "title": "My page",
+    "items": {
+        "big-container": {
+            "area": [0, 0, 500, 300],
+            "hasImage":true
+        },
+        "name-textfield": {
+            "area": [120, 10, 200, 50],
+            "hasImage":true
+        },
+        "button-save": {
+            "area": [10, 10, 100, 50],
+            "hasImage":true
+        },
+        "menu-item-1": {
+            "area": [30, 10, 20, 10],
+            "hasImage":true
+        },
+        "menu-item-2": {
+            "area": [50, 10, 20, 10],
+            "hasImage":true
+        },
+        "menu-item-3": {
+            "area": [70, 10, 20, 10],
+            "hasImage":true
+        },
+        "screen": {
+            "area": [0, 0, 300, 1000],
+            "hasImage": true
+        },
+        "viewport": {
+            "area": [0, 0, 300, 500],
+            "hasImage": true
+        }
+    }
+}

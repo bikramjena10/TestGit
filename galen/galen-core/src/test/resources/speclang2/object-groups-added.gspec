@@ -1,0 +1,11 @@
+@objects
+    obj1        #obj1
+    obj2        #obj2
+    obj3        #obj3
+
+    anotherObject  #anotherObject
+
+
+@groups
+    (groupA, groupB)        obj1, obj3
+    groupC                  obj*

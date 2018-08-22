@@ -1,0 +1,58 @@
+========================================
+Test: page1.test
+========================================
+check homepage.spec --include all,mobile
+= Unnamed =
+    objectA1:
+->      inside other-object 10px left
+->      :   objectA1 is not inside other-object
+        width 10 to 20px
+        width 10 to 20px
+
+    objectA2:
+        width 10 to 20px
+->      width 10px
+->      :   objectA2 width is 20px instead of 10px
+->      text is "Login"
+->      :   objectA2 text is "Logout" instead of "Login"
+
+= some section 2 =
+    objectA1:
+        height 10 to 20px
+= Sub section =
+            sub-objectA1:
+                height 10 to 20px
+->              width 10px
+->              :   sub-objectA1 width is 20px instead of 10px
+
+        component some-component.spec
+
+check homepage.spec --include all,mobile
+= some section 1 =
+    objectB1:
+        width 10 to 20px
+->      inside other-object 10px left
+->      :   objectB1 is not inside other-object
+->      :   second error message with <xml> &tags
+
+    objectB2:
+        height 100px
+
+    objectB2:
+        width 100px
+
+com.galenframework.components.report.FakeException: Some exception here
+\t    at net.mindengine.someclass.SomeClass.method1(SomeClass.java:4)
+\t    at net.mindengine.someclass.SomeClass2.method2(SomeClass2.java:5)
+\t    at net.mindengine.someclass.SomeClass3.method3(SomeClass3.java:6)
+
+========================================
+----------------------------------------
+========================================
+Failed tests:
+    page1.test
+
+Suite status: FAIL
+Total tests: 1
+Total failed tests: 1
+Total failures: 5
